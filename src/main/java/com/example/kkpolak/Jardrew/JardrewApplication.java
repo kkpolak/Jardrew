@@ -1,5 +1,6 @@
 package com.example.kkpolak.Jardrew;
 
+import com.example.kkpolak.Jardrew.app.DatabaseConnection;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,6 +9,8 @@ public class JardrewApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(JardrewApplication.class, args);
+		System.out.println("siema eniu");
+
 	}
 
 }
