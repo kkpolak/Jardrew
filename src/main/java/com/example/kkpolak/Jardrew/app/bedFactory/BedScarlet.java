@@ -7,14 +7,17 @@ import com.example.kkpolak.Jardrew.entity.bed.Listwa;
 import com.example.kkpolak.Jardrew.entity.bed.Noga;
 import com.example.kkpolak.Jardrew.entity.bed.Poprzeczka;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class BedScarlet implements BedFactory{
+@NoArgsConstructor
+public class BedScarlet extends Bed implements BedFactory{
 
-  private float price;
-  private int quantity;
+  public BedScarlet(int price){
+    super(price);
+  }
 
   @Override
   public Front produceFront() {

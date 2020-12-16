@@ -6,12 +6,19 @@ import com.example.kkpolak.Jardrew.entity.bed.Gora;
 import com.example.kkpolak.Jardrew.entity.bed.Listwa;
 import com.example.kkpolak.Jardrew.entity.bed.Noga;
 import com.example.kkpolak.Jardrew.entity.bed.Poprzeczka;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class BedIsabella extends Bed implements BedFactory{
+
+  public BedIsabella(int price){
+    super(price);
+  }
 
   @Override
   public Front produceFront() {
