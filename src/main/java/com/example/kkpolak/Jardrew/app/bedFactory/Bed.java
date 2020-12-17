@@ -11,4 +11,9 @@ import lombok.Setter;
 @Setter
 public class Bed {
   private float price;
+  private String name;
+
+  public String siema (){
+    return "abc";
+  }
 }

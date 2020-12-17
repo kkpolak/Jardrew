@@ -1,16 +1,28 @@
 package com.example.kkpolak.Jardrew.app.factureDecorator;
 
+import com.example.kkpolak.Jardrew.app.bedFactory.Bed;
+import com.example.kkpolak.Jardrew.app.bedFactory.BedScarlet;
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.List;
 import java.util.Timer;
 import lombok.AllArgsConstructor;
 
-@AllArgsConstructor
 public class FactureWithUKbedNames extends FactureAcessoriesDecorator{
 
   private Facture facture;
+
+  public FactureWithUKbedNames(
+      List<? super Bed> beds) {
+    super(beds);
+  }
+
+  public FactureWithUKbedNames(Facture facture){
+    super(facture.getBeds());
+    this.facture = facture;
+  }
 
   @Override
   public Double price() {
@@ -35,6 +47,10 @@ public class FactureWithUKbedNames extends FactureAcessoriesDecorator{
 
   @Override
   public String toString() {
-    return null;
+    beds.forEach(x -> ((Bed) x).setName(((Bed) x).getName() + "UK"));
+    StringBuilder sb = new StringBuilder();
+
+    beds.forEach(x-> sb.append(((Bed) x).getName()));
+    return sb.toString();
   }
 }
