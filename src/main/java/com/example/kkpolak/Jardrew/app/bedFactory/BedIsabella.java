@@ -17,7 +17,7 @@ import lombok.Setter;
 public class BedIsabella extends Bed implements BedFactory{
 
   public BedIsabella(int price){
-    super(price);
+    super(price, "ISABELLA");
   }
 
   @Override
