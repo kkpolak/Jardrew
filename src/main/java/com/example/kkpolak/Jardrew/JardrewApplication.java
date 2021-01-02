@@ -9,8 +9,6 @@ public class JardrewApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(JardrewApplication.class, args);
-		System.out.println("siema eniu");
-
 	}
 
 }
