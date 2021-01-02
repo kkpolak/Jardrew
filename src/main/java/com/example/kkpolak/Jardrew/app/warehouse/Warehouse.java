@@ -13,6 +13,12 @@ public class Warehouse implements Observable{
   private Set<Observer> observers = new HashSet<>();
   private MaterialService materialService;
   private WAREHOUSE_STATE WS;
+  private UpdateWarehouseStateStrategy stateUpdater; //to jest pole z inferfejsem
+
+  public Warehouse(
+      UpdateWarehouseStateStrategy stateUpdater) {
+    this.stateUpdater = stateUpdater;
+  }
 
   @Override
   public void attach(Observer observer) {

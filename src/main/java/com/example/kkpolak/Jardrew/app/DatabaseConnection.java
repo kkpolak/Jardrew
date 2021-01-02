@@ -15,7 +15,7 @@ public class DatabaseConnection {
 
   private DatabaseConnection() throws SQLException {
     try {
-      Class.forName("org.postgresql.Driver");
+      Class.forName("org.mysql.Driver");
       this.connection = DriverManager.getConnection(url, username, password);
     } catch (ClassNotFoundException ex) {
       System.out.println("Database Connection Creation Failed : " + ex.getMessage());
