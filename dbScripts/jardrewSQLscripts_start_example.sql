@@ -1,5 +1,5 @@
 mysql -u root -p
-password: password
+#password: password
 
 CREATE DATABASE jardrew;
 use jardrew;
