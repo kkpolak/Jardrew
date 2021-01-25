@@ -1,15 +1,15 @@
 How to start using this app:
-     1. connect your mysql: mysql -u root -p (usually)
-     2. run script: jardrew/dbScripts/jardrewSQLscript_start_example.sql
-     3. run spring-boot app: JardrewApplication
-     4. examples of endpoints: 
-          • localhost:8080/front/fronts
-          • localhost:8080/front/addFront
-          • localhost:8080/front/addFronts
-          • localhost:8080/front/frontById/{id}
-          • localhost:8080/front/{material}
-          • localhost:8080/front/update
-          • localhost:8080/front/delete/{id}
+1. Connect your mysql: mysql -u root -p (usually)
+2. Cun script: jardrew/dbScripts/jardrewSQLscript_start_example.sql
+3. Run spring-boot app: JardrewApplication
+4. Examples of endpoints: 
+     - localhost:8080/front/fronts
+     - localhost:8080/front/addFront
+     - localhost:8080/front/addFronts
+     - localhost:8080/front/frontById/{id}
+     - localhost:8080/front/{material}
+     - localhost:8080/front/update
+     - localhost:8080/front/delete/{id}
 
 Application description:
 The application is the initial prototype of a resource controlling website in a manufacturing company.
@@ -18,10 +18,7 @@ Application support:
 The application is supported by using the appropriate endpoint. Endpoints will be supported from the frontend side in the future. For using the application at the moment, you have to manually use individual endpoints.
 
 
-Main and general functionalities of the application:
-     • handling of the warehouse database
-     • element database support
-     • handling of sales documentation - invoice generation system
+Main and general functionalities of the application: handling of the warehouse database, element database support, handling of sales documentation - invoice generation system.
 
 Design patterns:
 
