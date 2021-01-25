@@ -1,26 +1,24 @@
-Opis aplikacji:
-Aplikacja służy do pracy biura firmy Jardrew, jest to firma zajmująca sie wytwarzaniem mebli drewnianych, głównie łóżek. Firma ma szeroki zakres produktów dostosowanych do klientów polskich oraz zagraniczynych z innych krajów Europy. 
+Application description
+The application is the initial prototype of a resource controlling website in a manufacturing company.
 
-Obsługa aplikacji:
-Aplikacja jest obsługiwana poprzez używanie odpowiednich endpointów, w przyszłości endpointy będą obsługiwane od storny frontendowej, w tej chwili aby korzystać z aplikacji trzeba ręcznie korzystać z poszczególnych endpoitów.
-
-
-Główne I ogólne funkcjonalności aplikacji:
-    • obsługa bazy danych magazynu
-    • obsługa bazy danych elementów
-    • obsługa dokumentacji sprzedaży – system generacji faktur
-
-Wzorce projektowe:
-
-1. Facade – REST controller obsługujący endpointy słążace do obsługi danych z bazy danych korzysta z metod interface’u frontService. Ujednolica dostęp do metod service’u.
-2. Dependency injection – wstrzykniecie interfejsu obsługującego strategię aktualizowania danych na temat stanu magazynu
-3. MVC – struktura tworząca trzy warstwy obsługująca poszczególne elementy łóżek: model - modele elementów łóżka, view – sprawdzenie w przeglądarce różnych elementów(narazie tylko w formie wyświetlenia json’a), controller – kontrola elementów w bazie danych
-4. Builder – budowanie poszczególnych elementów łóżka
-5. Singleton – instancja połączenia z bazą danych
-6. Observer – po aktualizacji bazy danych materiałów, ich ilości, zapotrzebowania oraz innych danych określa stan magazynu, w zależności od braków lub nadmiarów poszczególnych elementów bądź gotowych już elementów łóżka określa stan magazynu.
-7. Template method – Facture saver: służy do generowania I zapisywania faktur w zależności od wymaganego rozszerznia, w tej chwili są opcje: txt, odt, pdf
-8. Decorator – dekorator służący do tworzenia faktur, tworzy faktury w zależności od kraju oraz pozwala na wybór pewnych opcji, np loga firmy, zmiany nazw poszczególnych produktów dla poszczegolnych krajów itp.
-9. Strategy – zmiana stanu magazynu na podstawie analizy ostatnich operacji w bazie danych
-10. Factory – fabryka łózek, używa builderów poszczególnych elementów a końcowo produkuje całe łóżko z przekrojowymi danymi każdego elementu.
+Application support:
+The application is supported by using the appropriate endpoint. Endpoints will be supported from the frontend side in the future. For using the application at the moment, you have to manually use individual endpoints.
 
 
+Main and general functionalities of the application:
+     • handling of the warehouse database
+     • element database support
+     • handling of sales documentation - invoice generation system
+
+Design patterns:
+
+1. Facade – REST controller supporting endpoints used to handle data from the database uses the frontService interface methods. It unifies access to service methods.
+2. Dependency injection.
+3. MVC – structure creating three levels which support product elements: model - models of product elements, view - checking various elements in the browser (so far only in the form of json display), controller - checking elements in the database.
+4. Builder – building individual elements of the product.
+5. Singleton – database connection instance.
+6. Observer – after updating the database of materials, their quantity, demand and other data, it determines the stock level, depending on the shortages or excesses of individual elements or ready-made bed elements, it determines the stock level/feature.
+7. Template method – Facture saver: sgenerating and saving invoices depending on the required extension/feature.
+8. Decorator – creating invoices, composing them depending on the demand for given details, such as: data, logo and other additions.
+9. Strategy – state status changing, based on the analysis of recent database operations.
+10. Factory – a bed factory, uses builders of individual elements and finally produces a whole bed with cross-sectional data of each element.
