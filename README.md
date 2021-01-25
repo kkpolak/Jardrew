@@ -1,4 +1,17 @@
-Application description
+How to start using this app:
+     1. connect your mysql: mysql -u root -p (usually)
+     2. run script: jardrew/dbScripts/jardrewSQLscript_start_example.sql
+     3. run spring-boot app: JardrewApplication
+     4. examples of endpoints: 
+          • localhost:8080/front/fronts
+          • localhost:8080/front/addFront
+          • localhost:8080/front/addFronts
+          • localhost:8080/front/frontById/{id}
+          • localhost:8080/front/{material}
+          • localhost:8080/front/update
+          • localhost:8080/front/delete/{id}
+
+Application description:
 The application is the initial prototype of a resource controlling website in a manufacturing company.
 
 Application support:
