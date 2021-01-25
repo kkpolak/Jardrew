@@ -1,6 +1,6 @@
 How to start using this app:
 1. Connect your mysql: mysql -u root -p (usually)
-2. Cun script: jardrew/dbScripts/jardrewSQLscript_start_example.sql
+2. Run script: jardrew/dbScripts/jardrewSQLscript_start_example.sql
 3. Run spring-boot app: JardrewApplication
 4. Examples of endpoints: 
      - localhost:8080/front/fronts
